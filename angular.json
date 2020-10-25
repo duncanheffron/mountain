@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mountain"
+    }
+  },
+  "defaultProject": "mountain",
+  "cli": {
+    "analytics": "42c851cf-ff46-4a4c-96ba-e7899958a984"
+  }
 }

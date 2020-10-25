@@ -1,0 +1,122 @@
+.section {
+  &-title {
+    position: relative;
+    margin-bottom: 1.5rem;
+    font-weight: $font-weight-bold;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -.625rem;
+      left: 0;
+      width: 3.25rem;
+      height: .25rem;
+      background-color: var(--bs-primary);
+    }
+
+    &.center:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &.dark {
+      color: var(--bs-white);
+
+      &:after {
+        background-color: var(--bs-white);
+      }
+    }
+  }
+
+  &-subtitle {
+    font-size: 1rem;
+    font-weight: $font-weight-medium;
+    font-family: 'Gilroy', serif;
+    color: var(--bs-septenary);
+  }
+}
+
+
+// Experiences section
+.experiences {
+  $self: &;
+
+  &-section {
+    overflow-x: hidden;
+
+    #{$self}-title {
+      min-height: 100%;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+
+      .section-title {
+        color: var(--bs-white);
+
+        &:after {
+          background-color: var(--bs-white);
+        }
+      }
+
+      .section-subtitle {
+        color: var(--bs-white);
+        margin-bottom: 0;
+      }
+
+      .fr-fancy-link {
+        --fancy-link-color: var(--bs-white);
+
+        &:hover, &:focus {
+          --fancy-link-color: var(--bs-quaternary);
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        background-color: var(--bs-septenary);
+        min-height: 100%;
+        width: 450%;
+        z-index: -1;
+        left: -350%;
+        top: 0;
+
+        @include media-breakpoint-down(xl) {
+          width: 150%;
+          left: -50%;
+        }
+
+        @include media-breakpoint-down(md) {
+          width: 150%;
+          left: -25%;
+        }
+      }
+    }
+
+    #{$self}-cards {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        background-color: var(--bs-white);
+        min-height: 100%;
+        width: 250%;
+        z-index: -1;
+        right: -150%;
+        top: 0;
+
+        @include media-breakpoint-down(xl) {
+          width: 150%;
+          right: -50%;
+        }
+
+        @include media-breakpoint-down(md) {
+          width: 150%;
+          right: -25%;
+        }
+      }
+    }
+  }
+}

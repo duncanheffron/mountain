@@ -1,0 +1,14 @@
+.fr-navbar {
+  $self: &;
+
+  &-light {
+    #{$self}-brand {
+      font-family: 'Lobster', serif;
+      color: var(--bs-quaternary);
+      font-size: 1.85rem;
+      line-height: 1.825rem;
+      padding: 0;
+      letter-spacing: 0;
+    }
+  }
+}

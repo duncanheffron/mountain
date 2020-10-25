@@ -1,0 +1,31 @@
+// Fonts
+
+@font-face {
+	font-family: "Gilroy";
+	font-weight: 500;
+	src: url("~src/assets/fonts/Gilroy-Medium.eot?") format("eot"),
+		url("~src/assets/fonts/Gilroy-Medium.woff2") format("woff2"),
+		url("~src/assets/fonts/Gilroy-Medium.woff") format("woff"),
+		url("~src/assets/fonts/Gilroy-Medium.ttf") format("truetype"),
+		url("~src/assets/fonts/Gilroy-Medium.svg#Gilroy-Medium") format("svg");
+}
+
+@font-face {
+	font-family: "Gilroy";
+	font-weight: 700;
+	src: url("~src/assets/fonts/Gilroy-Bold.eot?") format("eot"),
+		url("~src/assets/fonts/Gilroy-Bold.woff2") format("woff2"),
+		url("~src/assets/fonts/Gilroy-Bold.woff") format("woff"),
+		url("~src/assets/fonts/Gilroy-Bold.ttf") format("truetype"),
+		url("~src/assets/fonts/Gilroy-Bold.svg#Gilroy-Bold") format("svg");
+}
+
+@font-face {
+	font-family: "Lobster";
+	font-weight: 600;
+	src: url("~src/assets/fonts/Lobster.eot?") format("eot"),
+		url("~src/assets/fonts/Lobster.woff2") format("woff2"),
+		url("~src/assets/fonts/Lobster.woff") format("woff"),
+		url("~src/assets/fonts/Lobster.ttf") format("truetype"),
+		url("~src/assets/fonts/Lobster.svg#Lobster-Regular") format("svg");
+}

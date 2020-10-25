@@ -1,0 +1,25 @@
+.hero {
+  $self: &;
+
+  &-container {
+    height: 500px;
+
+    .row {
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &-title {
+    font-size: 90px;
+    line-height: 88px;
+    font-weight: $font-weight-bold;
+  }
+
+  &-subtitle {
+    font-size: 24px;
+    line-height: 22px;
+    color: $quaternary;
+  }
+}

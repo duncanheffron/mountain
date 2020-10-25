@@ -1,0 +1,332 @@
+.fr-card {
+  $self: &;
+
+  position: relative;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: $box-shadow-sm;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: background-color .2s,
+  color .2s,
+  box-shadow .2s,
+  transform .2s;
+
+  &--pattern {
+    &::before {
+      content: url("~src/assets/shape-pattern-small-white.svg");
+      position: absolute;
+      top: -3.25rem;
+      right: 1.25rem;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+
+    &.dummy-card {
+      #{$self} {
+
+        &-prepend, &-copy, &-prepend.lorem-ipsum, &-urlLink {
+          color: $quinary !important;
+          animation: blinking 3s ease-in infinite;
+        }
+
+        &-prepend-icon, &--project-brand {
+          background-color: $quinary !important;
+          animation: blinking 3s ease-in infinite;
+        }
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      #{$self} {
+        background-color: $secondary;
+        box-shadow: $box-shadow-md;
+        transform: translateY(-5px);
+
+        &-prepend, &-title, &-copy {
+          color: $white !important;
+        }
+
+        &-prepend-icon {
+          background-color: $white;
+        }
+
+        &-tag {
+          color: $secondary !important;
+          background-color: $white !important;
+        }
+
+        &-urlLink {
+          color: $white;
+
+          &:hover {
+            color: $quaternary;
+          }
+        }
+
+        &--pattern::before {
+          opacity: 1;
+        }
+
+        &--project {
+          background-color: $septenary;
+
+          #{$self}-title {
+            text-decoration: none;
+          }
+
+          #{$self}-divider {
+            background-color: $white;
+          }
+
+          &-brand {
+            background-color: $white !important;
+
+            img {
+              filter: brightness(1) invert(0);
+            }
+          }
+        }
+
+        &--job {
+          background-color: $quaternary;
+        }
+
+        &--travel-map img {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
+
+  &-header {
+    padding: 1.5rem 1.5rem 0;
+    background-color: transparent;
+    border: 0;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+  }
+
+  &-footer {
+    padding: 1rem 1.5rem 1.5rem;
+    background-color: transparent;
+    border: 0;
+  }
+
+  &-prepend {
+    font-weight: $font-weight-bold;
+    color: $septenary;
+    font-size: .75rem;
+    text-decoration: none;
+    margin: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: color .2s,
+    text-decoration .2s;
+
+    &-icon {
+      height: .125rem;
+      width: 1rem;
+      border-radius: .25rem;
+      margin: 0 .5rem 0 0;
+      background-color: $septenary;
+      transition: background-color .2s ease;
+    }
+  }
+
+  &-title {
+    font-weight: $font-weight-bold;
+    color: $septenary;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-decoration: none;
+    margin: 0 0 .25rem;
+    transition: color .2s,
+    text-decoration .2s;
+  }
+
+  &-urlLink {
+    font-weight: $font-weight-medium;
+    color: $quinary;
+    font-size: .625rem;
+    line-height: 1.125rem;
+    margin: 0 0 .5rem;
+    transition: color .2s,
+    text-decoration .2s;
+  }
+
+  &-copy {
+    font-weight: $font-weight-medium;
+    color: $dark;
+    margin: 0;
+    font-size: .75rem;
+    line-height: 1rem;
+    transition: color .2s;
+  }
+
+  &-divider {
+    height: 1px;
+    width: 100%;
+    display: flex;
+    margin: 0 0 1rem;
+    background-color: $quaternary;
+    transition: background-color .2s;
+  }
+
+  &--project {
+    min-height: 10rem;
+    transform: scale(0);
+    transform-origin: center;
+    animation: loadCards .4s ease-out forwards;
+
+    &-brand {
+      height: 3rem;
+      width: 3rem;
+      border-radius: $border-radius;
+      display: inline-block;
+      position: relative;
+      transition: background-color .2s;
+
+      img {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        height: 1.75rem;
+        width: 1.75rem;
+        transform: translate(-50%, -50%);
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    #{$self}-body {
+      padding: 1.5rem 2rem 0;
+      justify-content: normal;
+
+      #{$self}-copy {
+        margin: 0 0 .5rem;
+      }
+    }
+
+    #{$self}-prepend {
+      margin-bottom: $spacer;
+
+      &.sketch {
+        color: rgb(250, 100, 0);
+      }
+
+      &.wordpress {
+        color: rgb(0, 135, 190);
+      }
+
+      &.bootstrap {
+        color: rgb(121, 82, 179);
+      }
+
+      &.vuejs {
+        color: rgb(66, 184, 131);
+      }
+
+      &.angular {
+        color: rgb(221, 0, 48);
+      }
+    }
+  }
+
+  &--job {
+    min-height: 9.5rem;
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid $secondary-light;
+
+    &#{$self}--pattern {
+      &::before {
+        top: -6rem;
+      }
+    }
+
+    #{$self}-body {
+      justify-content: flex-start;
+    }
+
+    #{$self}-title {
+      margin: 0 0 .5rem;
+    }
+
+    #{$self}-prepend {
+      margin: 0 0 1rem;
+
+      &.full-time {
+        color: $job-full-time;
+      }
+
+      &.part-time {
+        color: $job-part-time;
+      }
+
+      &.internship {
+        color: $job-internship;
+      }
+    }
+  }
+
+  &--travel {
+    height: 8.5rem;
+    position: relative;
+
+    &-map {
+      position: absolute;
+      margin-bottom: auto;
+      justify-items: center;
+
+      img {
+        width: 100%;
+        max-width: 200px;
+        filter: brightness(1) invert(0);
+        transition: filter .2s;
+      }
+    }
+
+    #{$self}-prepend {
+      &.vacation {
+        color: $travel-vacation;
+      }
+
+      &.city-trip {
+        color: $travel-city-trip;
+      }
+    }
+  }
+}
+
+@keyframes loadCards {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

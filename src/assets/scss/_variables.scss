@@ -63,6 +63,7 @@ $colors: (
 $primary:           rgb(246, 158, 123) !default;
 $secondary:         rgb(128, 140, 108) !default;
 $tertiary:          rgb(56, 62, 86) !default;
+$quaternary:        rgb(238, 218, 209) !default;
 
 $success:           $green !default;
 $info:              $cyan !default;
@@ -75,6 +76,7 @@ $theme-colors: (
   "primary":        $primary,
   "secondary":      $secondary,
   "tertiary":       $tertiary,
+  "quaternary":     $quaternary,
   "success":        $success,
   "info":           $info,
   "warning":        $warning,
@@ -299,7 +301,7 @@ $font-size-lg:                $font-size-base * 1.25 !default;
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
-$font-weight-medium:          500 !default;
+$font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
@@ -319,7 +321,7 @@ $h6-font-size:                $font-size-base !default;
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        $font-weight-bold !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 
@@ -333,7 +335,7 @@ $display-font-sizes: (
   6: 2.5rem
 ) !default;
 
-$display-font-weight: 300 !default;
+$display-font-weight: $font-weight-bold !default;
 $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 

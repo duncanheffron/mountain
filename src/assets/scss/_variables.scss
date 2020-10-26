@@ -60,65 +60,23 @@ $colors: (
 ) !default;
 // scss-docs-end colors-map
 
-$primary:           rgb(55, 87, 251) !default;
-$primary-100:       rgb(5, 44, 240) !default;
-$primary-200:       rgb(4, 35, 192) !default;
-
-$secondary:         rgb(131, 152, 255) !default;
-$secondary-100:     rgb(55, 88, 255) !default;
-$secondary-200:     rgb(0, 41, 249) !default;
-$secondary-light:   rgb(231, 235, 255) !default;
-
-$tertiary:          rgb(220, 240, 251) !default;
-$tertiary-100:      rgb(134, 204, 241) !default;
-$tertiary-200:      rgb(69, 176, 233) !default;
-
-$quaternary:        rgb(255, 49, 90) !default;
-$quaternary-100:    rgb(245, 0, 49) !default;
-$quaternary-200:    rgb(196, 0, 39) !default;
-$quaternary-light:  rgb(255, 228, 234) !default;
-
-$quinary:           rgb(163, 163, 163) !default;
-$senary:            rgb(246, 247, 251) !default;
-
-$septenary:         rgb(5, 10, 35) !default;
-$septenary-100:     rgb(4, 8, 29) !default;
-$septenary-200:     rgb(3, 6, 22) !default;
+$primary:           rgb(246, 158, 123) !default;
+$secondary:         rgb(128, 140, 108) !default;
+$tertiary:          rgb(56, 62, 86) !default;
+$quaternary:        rgb(238, 218, 209) !default;
 
 $success:           $green !default;
 $info:              $cyan !default;
 $warning:           $yellow !default;
 $danger:            $red !default;
 $light:             $gray-100 !default;
-$dark:              $gray-800 !default;
-
-$job-full-time:     $primary !default;
-$job-part-time:     rgb(160, 0, 253) !default;
-$job-internship:    rgb(255, 128, 37) !default;
-
-$travel-vacation:   $job-internship !default;
-$travel-city-trip:  $job-part-time !default;
+$dark:              rgb(51, 51, 51) !default;
 
 $theme-colors: (
   "primary":        $primary,
-  "primary-100":    $primary-100,
-  "primary-200":    $primary-200,
   "secondary":      $secondary,
-  "secondary-100":  $secondary-100,
-  "secondary-200":  $secondary-200,
-  "secondary-light":$secondary-light,
   "tertiary":       $tertiary,
-  "tertiary-100":   $tertiary-100,
-  "tertiary-200":   $tertiary-200,
   "quaternary":     $quaternary,
-  "quaternary-100": $quaternary-100,
-  "quaternary-200": $quaternary-200,
-  "quaternary-light":$quaternary-light,
-  "quinary":        $quinary,
-  "senary":         $senary,
-  "septenary":      $septenary,
-  "septenary-100":  $septenary-100,
-  "septenary-200":  $septenary-200,
   "success":        $success,
   "info":           $info,
   "warning":        $warning,
@@ -192,8 +150,8 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $senary !default;
-$body-color:                $septenary !default;
+$body-bg:                   $white !default;
+$body-color:                $dark !default;
 $body-text-align:           null !default;
 
 
@@ -246,9 +204,7 @@ $grid-breakpoints: (
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
+  lg: 960px
 ) !default;
 // scss-docs-end container-max-widths
 
@@ -326,7 +282,7 @@ $embed-responsive-aspect-ratios: (
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-primary:         "Gilroy", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-primary:         "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-sans-serif:      $font-family-primary;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
@@ -343,7 +299,7 @@ $font-size-lg:                $font-size-base * 1.25 !default;
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
-$font-weight-medium:          500 !default;
+$font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
@@ -363,7 +319,7 @@ $h6-font-size:                $font-size-base !default;
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        $font-weight-bold !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 
@@ -377,7 +333,7 @@ $display-font-sizes: (
   6: 2.5rem
 ) !default;
 
-$display-font-weight: 300 !default;
+$display-font-weight: $font-weight-bold !default;
 $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 

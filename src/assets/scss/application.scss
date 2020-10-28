@@ -41,15 +41,9 @@
 
 // Custom Layout & components
 @import "root";
-//@import "components/navbar";
-//@import "components/links";
 @import "components/masthead";
-//@import "components/hero";
-//@import "components/footer";
-//@import "components/blocks";
-//@import "components/cards";
-//@import "components/carousel";
-//@import "components/parts";
+@import "components/cards";
+@import "components/sections";
 
 // Helpers
 @import "~bootstrap/scss/helpers";

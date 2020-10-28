@@ -64,6 +64,7 @@ $primary:           rgb(246, 158, 123) !default;
 $secondary:         rgb(128, 140, 108) !default;
 $tertiary:          rgb(56, 62, 86) !default;
 $quaternary:        rgb(238, 218, 209) !default;
+$quinary:           rgb(109, 109, 109) !default;
 
 $success:           $green !default;
 $info:              $cyan !default;
@@ -77,6 +78,7 @@ $theme-colors: (
   "secondary":      $secondary,
   "tertiary":       $tertiary,
   "quaternary":     $quaternary,
+  "quinary":        $quinary,
   "success":        $success,
   "info":           $info,
   "warning":        $warning,
@@ -291,7 +293,7 @@ $font-family-code:            var(--bs-font-monospace) !default;
 
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base effects the font size of the body text
-$font-size-root:              null !default;
+$font-size-root:              1rem !default;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
@@ -305,7 +307,7 @@ $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
-$line-height-base:            1.5 !default;
+$line-height-base:            1.6 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 

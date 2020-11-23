@@ -62,7 +62,7 @@ $colors: (
 
 $primary:           rgb(246, 158, 123) !default;
 $secondary:         rgb(128, 140, 108) !default;
-$tertiary:          rgb(56, 62, 86) !default;
+$tertiary: rgb(56, 62, 86) !default;
 $quaternary:        rgb(238, 218, 209) !default;
 $quinary:           rgb(109, 109, 109) !default;
 
@@ -321,7 +321,7 @@ $h6-font-size:                $font-size-base !default;
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        $font-weight-bold !default;
+$headings-font-weight:        $font-weight-semibold !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 

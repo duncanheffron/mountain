@@ -2,7 +2,7 @@
   $self: &;
 
   border: none;
-  border-radius: 0;
+  border-radius: .9375rem;
   box-shadow: 0 3px 20px 0 rgba(0,0,0,.16);
   overflow: hidden;
 
@@ -51,7 +51,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-image: url("~src/assets/images/arrow-right.svg");
+        background-image: url("~src/assets/images/arrow-right-light-sm.svg");
         background-repeat: no-repeat;
         background-position: center;
         z-index: 1;

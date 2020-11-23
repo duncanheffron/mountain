@@ -1,11 +1,16 @@
 .masthead {
   $self: &;
-  height: 550px;
-  max-height: 550px;
+  height: 100vh;
+  max-height: 100vh;
   background-image: url("~src/assets/images/hero/mountain-hero.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom center;
+
+  @include media-breakpoint-up(lg) {
+    height: 550px;
+    max-height: 550px;
+  }
 
   .container {
     height: 100%;
@@ -15,7 +20,12 @@
 
     .heading {
       position: relative;
-      font-size: 4.5rem;
+      font-size: 2.25rem;
+      font-weight: $font-weight-bold;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 4.5rem;
+      }
 
       &::after {
         content: url("~src/assets/images/shape-001.svg");
@@ -29,7 +39,10 @@
     .introduction {
       color: $quinary;
       font-size: 1.125rem;
-      max-width: 52%;
+
+      @include media-breakpoint-up(lg) {
+        max-width: 52%;
+      }
     }
   }
 }

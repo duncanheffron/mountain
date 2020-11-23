@@ -1,4 +1,6 @@
 .mt-link {
+  $self: &;
+
   color: inherit;
   text-decoration: none;
   position: relative;
@@ -20,7 +22,7 @@
   }
 
   &::after {
-    content: url("~src/assets/images/arrow-right-lg.svg");
+    content: url("~src/assets/images/arrow-right-sm-light.svg");
     position: absolute;
     display: block;
     height: 1.45rem;
@@ -29,19 +31,63 @@
     transform: translateY(-50%);
   }
 
+  &.text-primary {
+    &::before {
+      background-color: $primary;
+    }
+
+    &::after {
+      content: url("~src/assets/images/arrow-right-sm-primary.svg");
+    }
+  }
+
+  &.text-tertiary {
+    &::before {
+      background-color: $tertiary;
+    }
+
+    &::after {
+      content: url("~src/assets/images/arrow-right-sm-tertiary.svg");
+    }
+  }
+
   &.text-dark {
     &::before {
       background-color: $dark;
     }
 
     &::after {
-      content: url("~src/assets/images/arrow-right-lg-dark.svg");
+      content: url("~src/assets/images/arrow-right-sm-dark.svg");
     }
   }
 
   &:hover {
     &::before {
       width: 100%;
+    }
+  }
+
+  &#{$self}-lg {
+    &::after {
+      content: url("~src/assets/images/arrow-right-lg-light.svg");
+    }
+
+    &.text-primary {
+      &::after {
+        content: url("~src/assets/images/arrow-right-lg-primary.svg");
+      }
+    }
+
+    &.text-tertiary {
+      &::after {
+        content: url("~src/assets/images/arrow-right-lg-tertiary.svg");
+      }
+    }
+
+    &.text-dark {
+      &::after {
+        content: url("~src/assets/images/arrow-right-lg-dark.svg");
+      }
     }
   }
 }

@@ -7,6 +7,8 @@ import { HorseBehaviorTrainerComponent } from './bits/svg/brands/horse-behavior-
 import { BurgerComponent } from './bits/svg/brands/burger/burger.component';
 import { PostnlComponent } from './bits/svg/brands/postnl/postnl.component';
 import { SharevalueComponent } from './bits/svg/brands/sharevalue/sharevalue.component';
+import { LondonComponent } from './bits/svg/country/london/london.component';
+import { BrandShapeComponent } from './bits/svg/brand-shape/brand-shape.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { SharevalueComponent } from './bits/svg/brands/sharevalue/sharevalue.com
     HorseBehaviorTrainerComponent,
     BurgerComponent,
     PostnlComponent,
-    SharevalueComponent
+    SharevalueComponent,
+    LondonComponent,
+    BrandShapeComponent
   ],
   imports: [
     BrowserModule,

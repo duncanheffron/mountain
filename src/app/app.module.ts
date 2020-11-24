@@ -10,6 +10,15 @@ import { SharevalueComponent } from './bits/svg/brands/sharevalue/sharevalue.com
 import { LondonComponent } from './bits/svg/country/london/london.component';
 import { BrandShapeComponent } from './bits/svg/brand-shape/brand-shape.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { MastheadComponent } from './components/masthead/masthead.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { CasesComponent } from './components/cases/cases.component';
+import { SectionHeadingComponent } from './components/section-heading/section-heading.component';
+import { TravelsComponent } from './components/travels/travels.component';
+import { AboutComponent } from './components/about/about.component';
+import { CtaComponent } from './components/cta/cta.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +28,16 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     PostnlComponent,
     SharevalueComponent,
     LondonComponent,
-    BrandShapeComponent
+    BrandShapeComponent,
+    NavbarComponent,
+    MastheadComponent,
+    ExperienceComponent,
+    CasesComponent,
+    SectionHeadingComponent,
+    TravelsComponent,
+    AboutComponent,
+    CtaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

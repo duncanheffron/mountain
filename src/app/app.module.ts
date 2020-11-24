@@ -9,6 +9,7 @@ import { PostnlComponent } from './bits/svg/brands/postnl/postnl.component';
 import { SharevalueComponent } from './bits/svg/brands/sharevalue/sharevalue.component';
 import { LondonComponent } from './bits/svg/country/london/london.component';
 import { BrandShapeComponent } from './bits/svg/brand-shape/brand-shape.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BrandShapeComponent } from './bits/svg/brand-shape/brand-shape.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ScullyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]

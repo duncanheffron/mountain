@@ -2,7 +2,7 @@
   $self: &;
   height: 75vh;
   max-height: 75vh;
-  background-image: url("~src/assets/images/hero/winter-hero.jpg");
+  background-image: url("~src/assets/images/hero/primary-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -30,7 +30,7 @@
       z-index: 0;
       background-color: $white;
       border-radius: .9375rem .9375rem 0 0;
-      box-shadow: 0 3px 20px 0 rgba(0,0,0,.16);
+      @include mt-box-shadow();
 
       @include media-breakpoint-up(lg) {
         left: -2rem;

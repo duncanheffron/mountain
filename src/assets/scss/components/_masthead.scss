@@ -1,16 +1,77 @@
 .masthead {
   $self: &;
-  height: 550px;
-  max-height: 550px;
-  background-image: url("~src/assets/images/hero/mountain-hero.jpg");
-  background-size: 100%;
+  height: 75vh;
+  max-height: 75vh;
+  background-image: url("~src/assets/images/hero/winter-hero.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: top;
+
+  @include media-breakpoint-up(lg) {
+    height: 600px;
+    max-height: 600px;
+  }
 
   .container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 3rem;
+      width: 100%;
+      height: 80%;
+      z-index: 0;
+      background-color: $white;
+      border-radius: .9375rem .9375rem 0 0;
+      box-shadow: 0 3px 20px 0 rgba(0,0,0,.16);
+
+      @include media-breakpoint-up(lg) {
+        left: -2rem;
+        bottom: 3rem;
+        width: 90%;
+        height: 80%;
+      }
+    }
+
+    .heading {
+      position: relative;
+      font-size: 2.25rem;
+      font-weight: $font-weight-bold;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 4.5rem;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding-right: 1rem;
+        padding-left: 1rem;
+
+        &::after {
+          right: 1.5rem;
+        }
+      }
+    }
+
+    .introduction {
+      color: $quinary;
+      font-size: 1.125rem;
+      position: relative;
+
+      @include media-breakpoint-up(lg) {
+        max-width: 52%;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+    }
   }
 }

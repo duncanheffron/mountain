@@ -1,0 +1,136 @@
+.mt-section {
+  $self: &;
+
+  #{$self}__col {
+    & > .card {
+      @extend .mt-card;
+
+      .card-body {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .card-footer {
+        padding: 0 2rem 2rem;
+      }
+    }
+
+    &-brand {
+      svg {
+        max-width: 100%;
+        max-height: 6.75rem;
+        padding: 1rem 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-heading {
+      margin-bottom: .625rem;
+    }
+
+    &-content {
+      opacity: .75;
+      font-size: .875rem;
+      margin-bottom: 0;
+    }
+
+    &-date {
+      font-weight: $font-weight-semibold;
+      display: block;
+      font-size: .875rem;
+      margin-top: 1.25rem;
+    }
+
+    &-link {
+      font-size: .875rem;
+      padding-right: 1rem;
+      margin-top: 1.25rem;
+      align-self: flex-start;
+      transition: padding-right .2s ease;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        height: 1.35rem;
+        opacity: 0;
+        transition: opacity .2s ease;
+      }
+
+      &:hover {
+        padding-right: 2rem;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__about {
+    overflow: hidden;
+
+    .container {
+      position: relative;
+
+      #{$self}__about-heading {
+        position: relative;
+      }
+
+      #{$self}__about-image {
+        position: absolute;
+        width: auto;
+        height: 50%;
+        object-fit: contain;
+        right: 50%;
+        bottom: -8rem;
+        transform: translateX(50%);
+
+        @include media-breakpoint-up(lg) {
+          height: 100%;
+          right: -2rem;
+          bottom: 0;
+          transform: translateX(0);
+        }
+
+        @include media-breakpoint-up(xl) {
+          right: -7rem;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    color: $white;
+    background-color: $secondary;
+    overflow: hidden;
+
+    .container {
+      position: relative;
+
+      #{$self}__cta-heading {
+        position: relative;
+      }
+
+      #{$self}__cta-image {
+        position: absolute;
+        width: auto;
+        height: 60%;
+        object-fit: contain;
+        right: 50%;
+        bottom: -10rem;
+        transform: translateX(50%);
+
+        @include media-breakpoint-up(lg) {
+          height: 100%;
+          right: -20rem;
+          bottom: 0;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}

@@ -431,10 +431,10 @@ $table-variants: (
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+$input-btn-padding-y:         1rem !default;
+$input-btn-padding-x:         2rem !default;
 $input-btn-font-family:       null !default;
-$input-btn-font-size:         $font-size-base !default;
+$input-btn-font-size:         .75rem !default;
 $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:         .2rem !default;
@@ -474,7 +474,7 @@ $btn-font-size-lg:            $input-btn-font-size-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-normal !default;
+$btn-font-weight:             $font-weight-semibold !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;

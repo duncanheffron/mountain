@@ -4,6 +4,7 @@
 // Custom Configuration
 @import "variables";
 @import "fonts";
+@import "mixins";
 
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
@@ -42,9 +43,11 @@
 // Custom Layout & components
 @import "root";
 @import "components/links";
+@import "components/buttons";
 @import "components/masthead";
 @import "components/cards";
 @import "components/sections";
+@import "components/footer";
 
 // Helpers
 @import "~bootstrap/scss/helpers";

@@ -1,0 +1,30 @@
+.mt-footer {
+  &__nav {
+    @extend .list-unstyled;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
+
+    li {
+      font-size: .875rem;
+      margin-bottom: .5rem;
+
+      &:first-child {
+        font-size: 1rem;
+        font-weight: $font-weight-semibold;
+      }
+
+      a {
+        color: $dark;
+        text-decoration: none;
+        transition: color .2s ease;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

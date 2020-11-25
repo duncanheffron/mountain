@@ -115,6 +115,10 @@
         position: relative;
       }
 
+      #{$self}__cta-content {
+        opacity: .85;
+      }
+
       #{$self}__cta-image {
         position: absolute;
         width: auto;

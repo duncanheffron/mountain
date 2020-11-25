@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'mt-navbar',
   templateUrl: './navbar.component.html'
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent{
+  collapsed = false;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  toggleMenu() {
+    this.collapsed = !this.collapsed;
+    const body = document.getElementsByTagName('body')[0];
+    body.classList.toggle('nav-open');
   }
-
 }

@@ -19,6 +19,7 @@ import { TravelsComponent } from './components/travels/travels.component';
 import { AboutComponent } from './components/about/about.component';
 import { CtaComponent } from './components/cta/cta.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BrandComponent } from './bits/brand/brand.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FooterComponent } from './components/footer/footer.component';
     TravelsComponent,
     AboutComponent,
     CtaComponent,
-    FooterComponent
+    FooterComponent,
+    BrandComponent
   ],
   imports: [
     BrowserModule,

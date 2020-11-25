@@ -1,13 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container">
-    <a class="navbar-brand font-weight-bold" href="#">Duncan</a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
+<nav class="navbar mt-navbar navbar-expand-lg navbar-light sticky-top bg-white shadow-sm">
+  <div class="container px-3 px-lg-1">
+    <a class="navbar-brand font-weight-bold" href="#"><mt-brand></mt-brand></a>
+    <div class="mt-navbar-nav mr-2 mr-lg-0">
+      <div class="mt-navbar-icon" [ngClass]="collapsed ? 'open' : ''" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="navbar-nav ml-auto" [ngClass]="collapsed ? 'open' : ''">
         <li class="nav-item">
-          <a href="#" class="nav-link">my work</a>
+          <a href="#" class="nav-link">portfolio</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">about</a>
+          <a href="#" class="nav-link">wie ben ik</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">contact</a>
@@ -16,3 +21,4 @@
     </div>
   </div>
 </nav>
+

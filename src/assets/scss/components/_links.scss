@@ -91,3 +91,19 @@
     }
   }
 }
+
+a:not([class]) {
+  color: $quinary;
+  text-decoration: none;
+  padding: 0 2px;
+  background-image: linear-gradient(to bottom, $quaternary 0%, $quaternary 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 2px;
+  transition: color .2s ease, background-size .2s;
+
+  &:hover {
+    color: $dark;
+    background-size: 4px 100%;
+  }
+}

@@ -21,5 +21,11 @@
         right: 1.25rem;
       }
     }
+
+    &.btn-primary {
+      &::after {
+        content: url("~src/assets/images/arrow-right-sm-dark.svg");
+      }
+    }
   }
 }

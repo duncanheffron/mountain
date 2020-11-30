@@ -9,12 +9,12 @@ import { ContactComponent } from './modules/contact/contact.component';
 const routes: Routes = [
   { path: '', component: IndexComponent, pathMatch: 'full' },
   { path: 'cases', component: CaseComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'about-cta', component: AboutComponent },
   { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

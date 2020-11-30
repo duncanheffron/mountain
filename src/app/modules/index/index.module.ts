@@ -8,7 +8,7 @@ import { MastheadComponent } from './components/masthead/masthead.component';
 import { ExperienceRowComponent } from './components/experience-row/experience-row.component';
 import { CaseRowComponent } from './components/case-row/case-row.component';
 import { TripRowComponent } from './components/trip-row/trip-row.component';
-import { AboutComponent } from './components/about/about.component';
+import { AboutCtaComponent } from './components/about-cta/about-cta.component';
 import { TripRowModule } from './components/trip-row/trip-row.module';
 
 @NgModule({
@@ -17,7 +17,7 @@ import { TripRowModule } from './components/trip-row/trip-row.module';
     ExperienceRowComponent,
     CaseRowComponent,
     TripRowComponent,
-    AboutComponent
+    AboutCtaComponent
   ],
   imports: [
     CoreModule,
@@ -31,7 +31,7 @@ import { TripRowModule } from './components/trip-row/trip-row.module';
     ExperienceRowComponent,
     CaseRowComponent,
     TripRowComponent,
-    AboutComponent
+    AboutCtaComponent
   ]
 })
 export class IndexModule {}

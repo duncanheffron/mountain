@@ -1,23 +1,58 @@
-<section class="mt-section mt-section__about">
+<mt-hero title="Contact" image="../assets/images/hero/primary-hero.jpg"></mt-hero>
+<section>
+  <div class="container gx-5 g-xlg-1 py-6">
+    <div class="row justify-content-between">
+      <div class="col-auto">
+        <h3>Kom in contact</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">hello@duncanheffron.com</a></li>
+          <li><a href="#">+316 30 40 63 88</a></li>
+        </ul>
+      </div>
+      <div class="col-auto">
+        <h3>Mijn werkplek</h3>
+        <ul class="list-unstyled">
+          <li><a href="https://goo.gl/maps/MtDRTYHZFByr8w3F6" target="_blank">Dwergbieslaan 66<br>3452 AK Vleuten</a></li>
+        </ul>
+      </div>
+      <div class="col-auto">
+        <h3>Sociale media</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">@duncan.developer</a></li>
+          <li><a href="#">@duncan.heffron</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mt-section mt-section__about bg-light">
   <div class="container gx-5 gx-lg-1 py-6">
-    <div class="row flex-column">
-      <div class="col-12 col-lg-8">
-        <h2 class="display-5 mt-section__about-heading mb-3">Klaar voor jouw eigen unieke website?
+    <div class="row justify-content-between">
+      <div class="col-12 col-lg-5">
+        <h3 class="mt-section__about-heading mb-3">Klaar voor jouw eigen unieke website?
           <mt-brand-shape class="text-primary" fillColor="currentColor"></mt-brand-shape>
-        </h2>
+        </h3>
         <p class="mt-section__cta-content mb-5 text-center text-lg-left">Een sterke website begint met een goed gesprek.
           Hoor graag wat jouw wensen zijn, om samen te kijken naar de mogelijkheden.</p>
       </div>
-      <div class="col-12 col-lg-8">
+      <div class="col-12 col-lg-6">
         <form>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+          <div class="form-floating mb-3">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <label for="floatingSelect">Works with selects</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Comments</label>
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -26,7 +61,6 @@
           <button type="submit" class="btn btn-primary rounded-pill mt-button--arrow">Submit</button>
         </form>
       </div>
-      <img class="mt-section__about-image" src="../assets/images/aboutme-cartoon.png" alt="aboutme-cartoon">
     </div>
   </div>
 </section>

@@ -8,6 +8,7 @@ import { HeartShapeComponent } from '../shared/assets/branding/heart-shape/heart
 import { BrandShapeComponent } from '../shared/assets/branding/brand-shape/brand-shape.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     BrandingComponent,
     BrandShapeComponent,
-    HeartShapeComponent
+    HeartShapeComponent,
+    HeroComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     BrandingComponent,
     BrandShapeComponent,
-    HeartShapeComponent
+    HeartShapeComponent,
+    HeroComponent
   ]
 })
 export class CoreModule {}

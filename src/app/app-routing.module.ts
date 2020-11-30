@@ -9,7 +9,7 @@ import { ContactComponent } from './modules/contact/contact.component';
 const routes: Routes = [
   { path: '', component: IndexComponent, pathMatch: 'full' },
   { path: 'cases', component: CaseComponent },
-  { path: 'about-cta', component: AboutComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent }
 ];
 

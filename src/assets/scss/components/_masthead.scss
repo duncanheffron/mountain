@@ -46,6 +46,10 @@
           width: 90%;
           height: 80%;
         }
+
+        @include media-breakpoint-up(xl) {
+          width: 72.5%;
+        }
       }
 
       .heading {

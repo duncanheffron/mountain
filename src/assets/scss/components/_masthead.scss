@@ -1,0 +1,90 @@
+.mt-masthead {
+  $self: &;
+  height: auto;
+  background-image: url("~src/assets/images/hero/primary-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  @include media-breakpoint-up(lg) {
+    height: 600px;
+    max-height: 600px;
+  }
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+
+    #{$self}-row {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 3rem;
+        width: 100%;
+        height: calc(100% - 6.5rem);
+        z-index: 0;
+        background-color: $white;
+        border-radius: .9375rem .9375rem 0 0;
+        @include mt-box-shadow();
+
+        @include media-breakpoint-up(lg) {
+          left: -2rem;
+          bottom: 3rem;
+          width: 90%;
+          height: 80%;
+        }
+
+        @include media-breakpoint-up(xl) {
+          width: 72.5%;
+        }
+      }
+
+      .heading {
+        position: relative;
+        font-size: 2.25rem;
+        font-weight: $font-weight-bold;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 4.5rem;
+        }
+
+        @include media-breakpoint-down(md) {
+          padding-right: 1rem;
+          padding-left: 1rem;
+
+          &::after {
+            right: 1.5rem;
+          }
+        }
+      }
+
+      .introduction {
+        color: $quinary;
+        font-size: 1.125rem;
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
+          max-width: 52%;
+        }
+
+        @include media-breakpoint-down(md) {
+          padding-right: 1rem;
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+}

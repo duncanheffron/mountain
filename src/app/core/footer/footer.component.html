@@ -1,0 +1,60 @@
+<footer class="mt-footer">
+  <div class="container gx-5 gx-lg-1">
+    <div class="row gx-0 gx-lg-6 pt-5 pb-3 pb-lg-5">
+      <div class="col-auto col-lg-3 mb-5 mb-lg-0">
+        <a routerLink="/" class="text-decoration-none" title="Back to start"><mt-brand></mt-brand></a>
+      </div>
+      <div class="col-12 col-lg-3">
+        <ul class="mt-footer__nav">
+          <li>Producten & diensten</li>
+          <li><a href="#">Eenvoudige website</a></li>
+          <li><a href="#">Uitgebreide website</a></li>
+          <li class="mt-footer__nav-new"><a href="#">Shopify API</a></li>
+          <li><a href="#">Digitaal ontwerp</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-3" *ngIf="data">
+        <ul class="mt-footer__nav">
+          <li>Mijn portfolio</li>
+          <li *ngFor="let project of data.projects | slice:0:4; let i = index"><a routerLink="/projects/{{ project.slug }}" title="{{ project.name }}">{{ project.name }}</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-3">
+        <ul class="mt-footer__nav">
+          <li>Kom in contact</li>
+          <li><a href="https://goo.gl/maps/MtDRTYHZFByr8w3F6" target="_blank">Dwergbieslaan 66<br>3452 AK Vleuten</a></li>
+          <li><a href="mailto:hello@duncanheffron.com" title="Send me a mail!">hello@duncanheffron.com</a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=+310630406388" target="_blank" title="Whatsapp me!">06-30406388</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row pt-3 small">
+      <div class="col-12 col-lg-auto mr-lg-auto">
+        <p class="text-quinary">Gebouwd met <mt-heart-shape></mt-heart-shape> door Duncan</p>
+      </div>
+      <div class="col-auto">
+        <a href="#">Sitemap</a>
+      </div>
+      <div class="col-auto">
+        <a href="#">Privacy</a>
+      </div>
+      <div class="col-auto">
+        <a routerLink="contact">Contact</a>
+      </div>
+    </div>
+    <div class="row pb-3 small">
+      <div class="col-12 col-lg-auto mr-lg-auto">
+        <p class="mt-5 mt-lg-0 text-quinary small">© 2020 Duncan Heffron</p>
+      </div>
+      <div class="col-auto">
+        <span class="text-quinary small">KVK 12345678</span>
+      </div>
+      <div class="col-auto">
+        <span class="text-quinary small">BTW NL000000000B00</span>
+      </div>
+      <div class="col-auto">
+        <span class="text-quinary small">BANK NL39 KNAB 0502 3361 10</span>
+      </div>
+    </div>
+  </div>
+</footer>

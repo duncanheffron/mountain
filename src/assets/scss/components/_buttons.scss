@@ -1,0 +1,31 @@
+.mt-button {
+  $self: &;
+
+  &--arrow {
+    position: relative;
+    padding-right: 4rem;
+
+    &::after {
+      content: url("~src/assets/images/arrow-right-sm-light.svg");
+      position: absolute;
+      display: block;
+      height: 1rem;
+      top: 50%;
+      right: 1.75rem;
+      transform: translateY(-50%);
+      transition: right .2s ease;
+    }
+
+    &:hover {
+      &::after {
+        right: 1.25rem;
+      }
+    }
+
+    &.btn-primary {
+      &::after {
+        content: url("~src/assets/images/arrow-right-sm-dark.svg");
+      }
+    }
+  }
+}

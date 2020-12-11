@@ -1,0 +1,27 @@
+<nav class="navbar mt-navbar navbar-expand-lg navbar-light sticky-top bg-white">
+  <div class="container px-3 px-lg-1">
+    <a class="navbar-brand fw-bold" routerLink="/" (click)="closeMenu()" title="Back to start"><mt-brand></mt-brand></a>
+    <div class="mt-navbar-nav mr-2 mr-lg-0">
+      <div class="mt-navbar-icon" [ngClass]="collapsed ? 'open' : ''" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="navbar-nav ml-auto" [ngClass]="collapsed ? 'open' : ''">
+        <li class="nav-item">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link d-lg-none" (click)="closeMenu()">home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/projects" routerLinkActive="active" class="nav-link" (click)="closeMenu()">portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/about" routerLinkActive="active" class="nav-link" (click)="closeMenu()">wie ben ik</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/contact" routerLinkActive="active" class="nav-link" (click)="closeMenu()">contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+

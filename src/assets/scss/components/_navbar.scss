@@ -1,0 +1,107 @@
+.mt-navbar {
+
+  .navbar-brand {
+    position: relative;
+    z-index: 50;
+  }
+
+  &-nav {
+    align-items: center;
+
+    .navbar-nav {
+      display: none;
+
+      @include media-breakpoint-up(lg) {
+        display: flex;
+      }
+
+      &.open {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 49;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        background-color: $white;
+        justify-content: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+          position: relative;
+          background-color: transparent;
+          height: auto;
+          width: auto;
+          flex-direction: row;
+        }
+
+        .nav-item {
+          font-size: 2.5rem;
+          font-weight: $font-weight-semibold;
+
+          @include media-breakpoint-up(lg) {
+            font-size: $font-size-base;
+            font-weight: $font-weight-base;
+          }
+        }
+      }
+    }
+
+    .mt-navbar-icon {
+      position: relative;
+      width: 1.5rem;
+      height: 1.25rem;
+      z-index: 50;
+
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+
+      span {
+        width: 1.5rem;
+        height: .25rem;
+        display: block;
+        background-color: $quinary;
+        border-radius: 1rem;
+
+        &:nth-child(1) {
+          margin-bottom: .25rem;
+          transform-origin: left;
+          transition: transform .2s ease;
+        }
+
+        &:nth-child(2) {
+          margin-bottom: .25rem;
+          transform-origin: center;
+          transition: transform .2s ease;
+        }
+
+        &:nth-child(3) {
+          transform-origin: left;
+          transition: transform .2s ease;
+        }
+      }
+
+      &.open {
+        span:nth-child(1) {
+          transform: rotate(45deg) translateX(.175rem) translateY(-.20rem);
+        }
+
+        span:nth-child(2) {
+          transform: scale(0);
+        }
+
+        span:nth-child(3) {
+          transform: rotate(-45deg) translateX(.15rem) translateY(.22rem);
+        }
+      }
+    }
+  }
+}
+
+body.nav-open {
+  overflow: hidden;
+}

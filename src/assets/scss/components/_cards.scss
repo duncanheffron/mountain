@@ -1,0 +1,96 @@
+.mt-card {
+  $self: &;
+
+  border: none;
+  height: 100%;
+  border-radius: .9375rem;
+  overflow: hidden;
+  @include mt-box-shadow();
+
+  .card-body {
+    padding: 2rem 1.5rem 1.5rem;
+    position: relative;
+
+    #{$self}--content {
+      z-index: 1;
+      position: relative;
+      pointer-events: none;
+    }
+
+    #{$self}--content,
+    #{$self}--content #{$self}--body,
+    #{$self}--content #{$self}--heading span {
+      transition: color .2s ease;
+    }
+
+    #{$self}--body {
+      color: $quinary;
+      font-size: .875rem;
+      margin-bottom: 3rem;
+      max-width: 85%;
+    }
+
+    #{$self}--link {
+      width: 3.125rem;
+      height: 3.125rem;
+      display: block;
+      box-sizing: border-box;
+      border-radius: 100%;
+      font-size: 0;
+      position: absolute;
+      margin-left: auto;
+      transition: background-color .2s ease;
+      bottom: 1.5rem;
+      right: 1.5rem;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("~src/assets/images/arrow-right-sm-light.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-radius: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: inherit;
+        z-index: 0;
+        transition: width .3s ease, height .3s ease;
+      }
+
+      &:hover {
+        &::after {
+          width: 2000%;
+          height: 2000%;
+        }
+
+        & + #{$self}--content,
+        & + #{$self}--content #{$self}--body,
+        & + #{$self}--content #{$self}--heading span {
+          color: $white !important;
+        }
+      }
+    }
+  }
+
+  .card-footer {
+    background-color: transparent;
+    border: none;
+    padding: 0 1.5rem 1.5rem;
+  }
+}

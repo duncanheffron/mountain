@@ -1,0 +1,21 @@
+.mt-hero {
+  overflow: hidden;
+
+  &-content {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 5rem;
+    }
+
+    h1 {
+      font-weight: $font-weight-bold;
+    }
+
+    h1, .breadcrumb {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

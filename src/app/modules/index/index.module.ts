@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CoreModule } from '../../core/core.module';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { CaseRowModule } from './components/case-row/case-row.module';
 
 import { MastheadComponent } from './components/masthead/masthead.component';
 import { ExperienceRowComponent } from './components/experience-row/experience-row.component';
@@ -25,7 +24,6 @@ import { IndexComponent } from './index.component';
     CoreModule,
     CommonModule,
     RouterModule,
-    CaseRowModule,
     TripRowModule
   ],
   exports: [

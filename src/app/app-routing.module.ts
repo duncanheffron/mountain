@@ -8,20 +8,27 @@ import { ContactComponent } from './modules/contact/contact.component';
 import { ExperiencesComponent } from './modules/experiences/experiences.component';
 import { TripsComponent } from './modules/trips/trips.component';
 import { CaseDetailComponent } from './modules/cases/case-detail/case-detail.component';
+import { CaseListComponent } from './modules/cases/case-list/case-list.component';
 
 const routes: Routes = [
   { path: '', component: IndexComponent, pathMatch: 'full' },
-  { path: 'cases', component: CasesComponent },
-  { path: 'case/:string', component: CaseDetailComponent, pathMatch: 'full' },
+  {
+    path: 'projects',
+    component: CasesComponent,
+    children : [
+      { path: '', component: CaseListComponent },
+      { path: ':slug', component: CaseDetailComponent }
+    ]
+  },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'experiences', component: ExperiencesComponent },
   { path: 'trips', component: TripsComponent },
-  { path: '**', component: IndexComponent }
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

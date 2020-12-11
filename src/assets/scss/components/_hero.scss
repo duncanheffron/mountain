@@ -5,6 +5,10 @@
     margin-top: 3rem;
     margin-bottom: 2rem;
 
+    @include media-breakpoint-up(lg) {
+      margin-top: 5rem;
+    }
+
     h1 {
       font-weight: $font-weight-bold;
     }

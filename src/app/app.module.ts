@@ -11,6 +11,8 @@ import { IndexModule } from './modules/index/index.module';
 import { CasesModule } from './modules/cases/cases.module';
 import { AboutModule } from './modules/about/about.module';
 import { ContactModule } from './modules/contact/contact.module';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { ContactModule } from './modules/contact/contact.module';
     IndexModule,
     CasesModule,
     AboutModule,
-    ContactModule
+    ContactModule,
+    GraphQLModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

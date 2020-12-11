@@ -2,7 +2,7 @@
   <div class="container gx-5 gx-lg-1">
     <div class="row gx-0 gx-lg-6 pt-5 pb-3 pb-lg-5">
       <div class="col-auto col-lg-3 mb-5 mb-lg-0">
-        <mt-brand></mt-brand>
+        <a routerLink="/" class="text-decoration-none" title="Back to start"><mt-brand></mt-brand></a>
       </div>
       <div class="col-12 col-lg-3">
         <ul class="mt-footer__nav">
@@ -13,13 +13,10 @@
           <li><a href="#">Digitaal ontwerp</a></li>
         </ul>
       </div>
-      <div class="col-12 col-lg-3">
+      <div class="col-12 col-lg-3" *ngIf="data">
         <ul class="mt-footer__nav">
           <li>Mijn portfolio</li>
-          <li><a href="#">ShareValue website</a></li>
-          <li><a href="#">PostPoint training</a></li>
-          <li><a href="#">Burgr. daily UI challenge</a></li>
-          <li><a href="#">Digital OV-Chipkaart</a></li>
+          <li *ngFor="let project of data.projects | slice:0:4; let i = index"><a routerLink="/projects/{{ project.slug }}" title="{{ project.name }}">{{ project.name }}</a></li>
         </ul>
       </div>
       <div class="col-12 col-lg-3">

@@ -85,18 +85,18 @@
         height: 50%;
         object-fit: contain;
         right: 50%;
-        bottom: -8rem;
+        bottom: -12rem;
         transform: translateX(50%);
 
         @include media-breakpoint-up(lg) {
-          height: 100%;
-          right: -2rem;
+          height: 90%;
+          right: 0;
           bottom: 0;
           transform: translateX(0);
         }
 
         @include media-breakpoint-up(xl) {
-          right: -7rem;
+          right: 4rem;
         }
       }
     }
@@ -140,6 +140,12 @@
   }
 
   &__case {
+    &:first-child {
+      .container {
+        padding-top: 2rem !important;
+      }
+    }
+
     &:nth-child(even) {
       background-color: $light;
 

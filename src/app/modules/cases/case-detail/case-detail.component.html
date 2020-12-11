@@ -1,8 +1,6 @@
-<mt-hero title="ShareValue" image="../assets/images/hero/primary-hero.jpg"></mt-hero>
+<mt-hero title="{{ project.name }}"></mt-hero>
 <div class="container">
   <div class="row">
-    <div class="col">
-      <p>Bij ShareValue werk ik in de detachering als front-end developer, daarnaast heb ik ook gewerkt in het interne</p>
-    </div>
+    <div class="col-12 col-lg-8" [innerHTML]="project.content"></div>
   </div>
 </div>

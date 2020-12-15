@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CoreModule } from '../../../../core/core.module';
 
-import { LondonComponent } from '../../../../shared/assets/trip-map/london/london.component';
+import { MapComponent } from '../../../../shared/assets/trip-map/map/map.component';
 
 @NgModule({
   declarations: [
-    LondonComponent
+    MapComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    LondonComponent
+    MapComponent
   ]
 })
 export class TripRowModule {}

@@ -8,27 +8,11 @@
         <a routerLink="experiences" class="mt-link mt-link-lg text-white">Bekijk al mijn ervaringen</a>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-lg-3 mt-3 mt-lg-5 gx-lg-6 gy-4 gy-lg-0">
-      <div class="mt-section__col col">
-        <h5 class="mt-section__col-heading">Junior Front-end</h5>
-        <p class="mt-section__col-content">Bij ShareValue werk ik in de detachering als front-end developer, daarnaast
-          heb ik ook gewerkt in het interne
-          webteam om de site naar de nieuwe standaart te brengen.</p>
-        <span class="mt-section__col-date text-primary">februari 2020 - heden</span>
-      </div>
-      <div class="mt-section__col col">
-        <h5 class="mt-section__col-heading">Junior Front-end</h5>
-        <p class="mt-section__col-content">Bij ShareValue werk ik in de detachering als front-end developer, daarnaast
-          heb ik ook gewerkt in het interne
-          webteam om de site naar de nieuwe standaart te brengen.</p>
-        <span class="mt-section__col-date text-primary">september 2019 - januari 2020</span>
-      </div>
-      <div class="mt-section__col col">
-        <h5 class="mt-section__col-heading">Intern Front-end</h5>
-        <p class="mt-section__col-content">Bij ShareValue werk ik in de detachering als front-end developer, daarnaast
-          heb ik ook gewerkt in het interne
-          webteam om de site naar de nieuwe standaart te brengen.</p>
-        <span class="mt-section__col-date text-primary">januari 2018 - februari 2019</span>
+    <div *ngIf="data" class="row row-cols-1 row-cols-lg-3 mt-3 mt-lg-5 gx-lg-6 gy-4 gy-lg-0">
+      <div *ngFor="let experience of data.experiences | slice:0:3;"  class="mt-section__col col">
+        <h5 class="mt-section__col-heading">{{ experience.name }}</h5>
+        <p class="mt-section__col-content">{{ experience.excerpt }}</p>
+        <span class="mt-section__col-date text-primary">{{ experience.start_date | date: 'MMMM yyyy' }}{{ experience.end_date != null ? ' - ' + [ experience.end_date | date: 'MMMM yyyy' ] : '' }}</span>
       </div>
     </div>
   </div>

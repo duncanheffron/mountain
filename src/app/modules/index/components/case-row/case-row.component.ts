@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   selector: 'mt-case-row',
   templateUrl: './case-row.component.html'
 })
-export class CaseRowComponent  implements OnInit, OnDestroy {
+export class CaseRowComponent implements OnInit, OnDestroy {
   data: any = {};
   loading = true;
   errors: any;

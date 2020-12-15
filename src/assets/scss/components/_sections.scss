@@ -23,6 +23,16 @@
       padding: 2rem;
     }
 
+    &:nth-child(even) {
+      #{$self}__col-map {
+        color: $tertiary;
+      }
+    }
+
+    &-map {
+      color: $secondary;
+    }
+
     &-heading {
       margin-bottom: .625rem;
     }

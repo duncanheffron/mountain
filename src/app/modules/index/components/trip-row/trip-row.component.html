@@ -14,34 +14,14 @@
           en de verhalen.</p>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-lg-3 gy-4 gy-lg-0">
-      <div class="mt-section__col col">
+    <div *ngIf="data" class="row row-cols-1 row-cols-lg-3 gy-4 gy-lg-0">
+      <div *ngFor="let travel of data.travels | slice:0:3;"  class="mt-section__col col">
         <div class="card">
           <div class="card-body">
-            <span class="mt-section__col-tag">city-trip</span>
-            <h5 class="mt-section__col-heading">London</h5>
+            <span *ngFor="let category of travel.categories | slice:0:3;" class="mt-section__col-tag">{{ category.name | lowercase }}</span>
+            <h5 class="mt-section__col-heading">{{ travel.name }}</h5>
             <p class="mt-section__col-content">April 2024</p>
-            <mt-london class="text-secondary" fillColor="currentColor"></mt-london>
-          </div>
-        </div>
-      </div>
-      <div class="mt-section__col col">
-        <div class="card">
-          <div class="card-body">
-            <span class="mt-section__col-tag">city-trip</span>
-            <h5 class="mt-section__col-heading">London</h5>
-            <p class="mt-section__col-content">April 2024</p>
-            <mt-london class="text-tertiary" fillColor="currentColor"></mt-london>
-          </div>
-        </div>
-      </div>
-      <div class="mt-section__col col">
-        <div class="card">
-          <div class="card-body">
-            <span class="mt-section__col-tag">city-trip</span>
-            <h5 class="mt-section__col-heading">London</h5>
-            <p class="mt-section__col-content">April 2024</p>
-            <mt-london class="text-secondary" fillColor="currentColor"></mt-london>
+            <mt-map class="mt-section__col-map" fillColor="currentColor" svgCode="{{ travel.destination.map_html }}"></mt-map>
           </div>
         </div>
       </div>

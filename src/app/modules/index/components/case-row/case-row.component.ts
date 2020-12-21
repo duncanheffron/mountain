@@ -3,6 +3,7 @@ import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 import PROJECTS_QUERY from '../../../../apollo/queries/case/cases';
 import { Subscription } from 'rxjs';
+import { environment } from '../../../../../environments/environment';
 
 @Component({
   selector: 'mt-case-row',
@@ -12,6 +13,7 @@ export class CaseRowComponent implements OnInit, OnDestroy {
   data: any = {};
   loading = true;
   errors: any;
+  local_env: boolean = environment.local;
 
   private queryProjects: Subscription;
 

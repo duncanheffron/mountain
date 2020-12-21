@@ -17,7 +17,7 @@
     <div *ngIf="data" class="row row-cols-1 row-cols-lg-3 gy-4 gy-lg-0">
       <div *ngFor="let project of data.projects | slice:0:3;" class="mt-section__col col">
         <div class="card">
-          <img class="mt-section__col-brand img-fluid" src="{{ project.thumbnail.url }}" alt="random" [style]="{ 'background-color' : project.company.secondaryColor }">
+          <img class="mt-section__col-brand img-fluid" src="{{ (local_env == true ? 'http://localhost:1337' : '') + project.thumbnail.url }}" alt="random" [style]="{ 'background-color' : project.company.secondaryColor }">
           <div class="card-body">
             <div class="mt-section__col-copy">
               <h5 class="mt-section__col-heading">{{ project.name }}</h5>

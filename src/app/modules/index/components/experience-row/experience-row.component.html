@@ -12,7 +12,7 @@
       <div *ngFor="let experience of data.experiences | slice:0:3;"  class="mt-section__col col">
         <h5 class="mt-section__col-heading">{{ experience.name }}</h5>
         <p class="mt-section__col-content">{{ experience.excerpt }}</p>
-        <span class="mt-section__col-date text-primary">{{ experience.start_date | date: 'MMMM yyyy' }}{{ experience.end_date != null ? ' - ' + [ experience.end_date | date: 'MMMM yyyy' ] : '' }}</span>
+        <span class="mt-section__col-date text-primary">{{ experience.start_date | date: 'MMMM yyyy' : 'GMT+1' : 'nl' }}{{ experience.end_date != null ? ' - ' + [ experience.end_date | date: 'MMMM yyyy' : 'GMT+1' : 'nl'  ] : ' - heden' }}</span>
       </div>
     </div>
   </div>

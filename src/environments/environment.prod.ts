@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   local: false,
-  api_url: 'http://prod-mt-api.herokuapp.com/graphql'
+  api_url: 'https://prod-mt-api.herokuapp.com/graphql'
 };

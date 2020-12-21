@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
+  local: true,
   api_url: 'http://localhost:1337/graphql',
-  local: true
 };
 
 /*

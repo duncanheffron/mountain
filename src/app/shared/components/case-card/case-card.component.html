@@ -1,0 +1,14 @@
+<div class="mt-section__col col">
+  <div class="card">
+    <img class="mt-section__col-brand img-fluid" src="{{ (localEnv == true ? 'http://localhost:1337' : '') + project.thumbnail.url }}" alt="random" [style]="{ 'background-color' : project.company.secondaryColor }">
+    <div class="card-body">
+      <div class="mt-section__col-copy">
+        <h5 class="mt-section__col-heading">{{ project.name }}</h5>
+        <p class="mt-section__col-content">{{ project.excerpt | slice: 0 : 100 }}</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a routerLink="/projects/{{ project.slug }}" class="mt-link text-tertiary mt-section__col-link" title="Bekijk de case van {{ project.name }}">Bekijk meer van de case</a>
+    </div>
+  </div>
+</div>

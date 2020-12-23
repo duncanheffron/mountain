@@ -15,16 +15,10 @@
       </div>
     </div>
     <div *ngIf="data" class="row row-cols-1 row-cols-lg-3 gy-4 gy-lg-0">
-      <div *ngFor="let travel of data.travels | slice:0:3;"  class="mt-section__col col">
-        <div class="card">
-          <div class="card-body">
-            <span *ngFor="let category of travel.categories | slice:0:3;" class="mt-section__col-tag">{{ category.name | lowercase }}</span>
-            <h5 class="mt-section__col-heading">{{ travel.name }}</h5>
-            <p class="mt-section__col-content">April 2024</p>
-            <mt-map class="mt-section__col-map" fillColor="currentColor" svgCode="{{ travel.destination.map_html }}"></mt-map>
-          </div>
-        </div>
-      </div>
+      <mt-trip-card class="mt-section__col col" *ngFor="let travel of data.travels | slice:0:3;" [travel]="travel"></mt-trip-card>
+      <mt-trip-card-skeleton class="mt-section__col skeleton col" *ngIf="loading"></mt-trip-card-skeleton>
+      <mt-trip-card-skeleton class="mt-section__col skeleton col" *ngIf="loading"></mt-trip-card-skeleton>
+      <mt-trip-card-skeleton class="mt-section__col skeleton col" *ngIf="loading"></mt-trip-card-skeleton>
     </div>
   </div>
 </section>

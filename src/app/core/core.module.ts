@@ -9,6 +9,13 @@ import { BrandShapeComponent } from '../shared/assets/branding/brand-shape/brand
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeroComponent } from './hero/hero.component';
+import { CaseCardComponent } from '../shared/components/case-card/case-card.component';
+import { CaseCardSkeletonComponent } from '../shared/components/case-card-skeleton/case-card-skeleton.component';
+import { ExperienceCardComponent } from '../shared/components/experience-card/experience-card.component';
+import { ExperienceCardSkeletonComponent } from '../shared/components/experience-card-skeleton/experience-card-skeleton.component';
+import { TripCardComponent } from '../shared/components/trip-card/trip-card.component';
+import { TripCardSkeletonComponent } from '../shared/components/trip-card-skeleton/trip-card-skeleton.component';
+import { MapComponent } from '../shared/assets/trip-map/map/map.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +25,14 @@ import { HeroComponent } from './hero/hero.component';
     BrandingComponent,
     BrandShapeComponent,
     HeartShapeComponent,
-    HeroComponent
+    HeroComponent,
+    CaseCardComponent,
+    CaseCardSkeletonComponent,
+    ExperienceCardComponent,
+    ExperienceCardSkeletonComponent,
+    TripCardComponent,
+    TripCardSkeletonComponent,
+    MapComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +45,14 @@ import { HeroComponent } from './hero/hero.component';
     BrandingComponent,
     BrandShapeComponent,
     HeartShapeComponent,
-    HeroComponent
+    HeroComponent,
+    CaseCardComponent,
+    CaseCardSkeletonComponent,
+    ExperienceCardComponent,
+    ExperienceCardSkeletonComponent,
+    TripCardComponent,
+    TripCardSkeletonComponent,
+    MapComponent
   ]
 })
 export class CoreModule {}

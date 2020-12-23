@@ -9,11 +9,10 @@
       </div>
     </div>
     <div *ngIf="data" class="row row-cols-1 row-cols-lg-3 mt-3 mt-lg-5 gx-lg-6 gy-4 gy-lg-0">
-      <div *ngFor="let experience of data.experiences | slice:0:3;"  class="mt-section__col col">
-        <h5 class="mt-section__col-heading">{{ experience.name }}</h5>
-        <p class="mt-section__col-content">{{ experience.excerpt }}</p>
-        <span class="mt-section__col-date text-primary">{{ experience.start_date | date: 'MMMM yyyy' : 'GMT+1' : 'nl' }}{{ experience.end_date != null ? ' - ' + [ experience.end_date | date: 'MMMM yyyy' : 'GMT+1' : 'nl'  ] : ' - heden' }}</span>
-      </div>
+      <mt-experience-card *ngFor="let experience of data.experiences | slice:0:3;" [experience]="experience"></mt-experience-card>
+      <mt-experience-card-skeleton *ngIf="loading"></mt-experience-card-skeleton>
+      <mt-experience-card-skeleton *ngIf="loading"></mt-experience-card-skeleton>
+      <mt-experience-card-skeleton *ngIf="loading"></mt-experience-card-skeleton>
     </div>
   </div>
 </section>

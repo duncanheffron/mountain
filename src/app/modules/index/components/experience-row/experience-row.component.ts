@@ -3,9 +3,6 @@ import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 import EXPERIENCES_QUERY from '../../../../apollo/queries/experience/experiences';
 import { Subscription } from 'rxjs';
-import { registerLocaleData } from '@angular/common';
-import localeNL from '@angular/common/locales/nl';
-registerLocaleData(localeNL, 'nl');
 
 @Component({
   selector: 'mt-experience-row',

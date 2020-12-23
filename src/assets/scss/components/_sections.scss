@@ -2,6 +2,8 @@
   $self: &;
 
   #{$self}__col {
+    height: 100%;
+
     & > .card {
       @extend .mt-card;
 
@@ -9,11 +11,124 @@
         padding: 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
       }
 
       .card-footer {
         padding: 0 2rem 2rem;
+      }
+    }
+
+    &.skeleton {
+
+      & > .card {
+        position: relative;
+        overflow: hidden;
+        background-color: $light;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: -250px;
+          top: -150%;
+          height: 250%;
+          width: 150px;
+          z-index: 10;
+          transform: rotate(45deg);
+          background: linear-gradient(to right, transparent 0%, #fff 50%, transparent 100%);
+          animation: SkeletonLoad 2.5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+        }
+
+        @keyframes SkeletonLoad {
+          from {
+            top: -150%;
+            left: -250px;
+          }
+          to   {
+            top: 15%;
+            left: 100%;
+          }
+        }
+      }
+
+      #{$self}__col {
+
+        &-brand {
+          height: 200px;
+          padding: 3rem 1rem;
+          opacity: .25;
+        }
+
+        &-heading {
+          width: 10rem;
+          height: 1.5rem;
+          background-color: $gray-200;
+          border-radius: .25rem;
+        }
+
+        &-content {
+          span {
+            display: block;
+            margin-bottom: .5rem;
+            height: .5rem;
+            background-color: $gray-200;
+            border-radius: .25rem;
+
+            &:nth-child(1) {
+              width: 16.5rem;
+            }
+
+            &:nth-child(2) {
+              width: 14.5rem;
+            }
+
+            &:nth-child(3) {
+              width: 15rem;
+            }
+
+            &:nth-child(4) {
+              width: 8rem;
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        &-map {
+          color: $gray-400;
+        }
+
+        &-link.disabled {
+          color: $dark !important;
+          opacity: .5;
+          pointer-events: none;
+        }
+      }
+
+      &:nth-child(even) {
+        #{$self}__col-map {
+          color: $gray-500;
+        }
+      }
+
+      &--dark {
+        #{$self}__col {
+          &-heading, &-content span, &-date {
+            opacity: .25;
+            animation: SkeletonLoadOpacity 1.5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+          }
+
+          @keyframes SkeletonLoadOpacity {
+            0% {
+              opacity: .25;
+            }
+            50%   {
+              opacity: 0;
+            }
+            100%   {
+              opacity: .25;
+            }
+          }
+        }
       }
     }
 

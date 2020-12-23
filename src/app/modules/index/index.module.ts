@@ -8,7 +8,6 @@ import { ExperienceRowComponent } from './components/experience-row/experience-r
 import { CaseRowComponent } from './components/case-row/case-row.component';
 import { TripRowComponent } from './components/trip-row/trip-row.component';
 import { AboutCtaComponent } from './components/about-cta/about-cta.component';
-import { TripRowModule } from './components/trip-row/trip-row.module';
 import { IndexComponent } from './index.component';
 
 @NgModule({
@@ -23,8 +22,7 @@ import { IndexComponent } from './index.component';
   imports: [
     CoreModule,
     CommonModule,
-    RouterModule,
-    TripRowModule
+    RouterModule
   ],
   exports: [
     MastheadComponent,

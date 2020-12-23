@@ -1,0 +1,8 @@
+<div class="card">
+  <div class="card-body">
+    <span *ngFor="let category of travel.categories | slice:0:3;" class="mt-section__col-tag">{{ category.name | lowercase }}</span>
+    <h5 class="mt-section__col-heading">{{ travel.name }}</h5>
+    <p class="mt-section__col-content">April 2024</p>
+    <mt-map class="mt-section__col-map" fillColor="currentColor" svgCode="{{ travel.destination.map_html }}"></mt-map>
+  </div>
+</div>
